@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: service-ribbon
+
+  banner:
+    charset: UTF-8
+    location: classpath:banner.txt
+
+  datasource:
+    hikari:
+      auto-commit: true
+      minimum-idle: 5
+      maximum-pool-size: 15
+      idle-timeout: 30000
+      pool-name: DatebookHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+      username: ENC(OQc3B/KGq87IfM34ucRIow==)
+      password: ENC(DMJBJfkyJfjqMt8/WVgDkDt+OMth14KG)
+
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    sql-script-encoding: UTF-8
+    url: jdbc:mysql://rm-2zehweh89pxzn5fs74o.mysql.rds.aliyuncs.com?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+
+jasypt:
+  encryptor:
+    password: RjY2RDgyMzU3NDYxQTQ3NDc2MTQ5REQ4ODkxQzB3MDA=
+    property:
+      prefix: "ENC("
+      suffix: ")"
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
