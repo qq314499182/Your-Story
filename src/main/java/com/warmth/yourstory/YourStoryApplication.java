@@ -14,4 +14,6 @@ public class YourStoryApplication {
     public static void main(String[] args) {
         SpringApplication.run(YourStoryApplication.class, args);
     }
+
+
 }
